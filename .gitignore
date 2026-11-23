@@ -1,0 +1,28 @@
+# Build artifacts
+dist/
+build/
+*.spec
+*.pyc
+__pycache__/
+*.pyo
+
+# Save files
+~/.terradesk/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Python
+*.egg-info/
+.env
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

@@ -1,0 +1,8 @@
+# TerraDesk dependencies
+# pygame-ce (Community Edition) supports Python 3.12+ and 3.14
+pygame-ce>=2.5.0
+# Or classic pygame (may need a compatible Python version):
+# pygame>=2.6.0
+pywin32>=305; sys_platform == "win32"
+pyinstaller>=6.0
+
