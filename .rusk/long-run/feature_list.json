@@ -1,0 +1,70 @@
+{
+  "project": "TerraDesk",
+  "description": "A Living World. Your World. - Desktop village simulation",
+  "features": [
+    {
+      "id": "core_engine",
+      "name": "Core Engine: Isometric Renderer, Camera, Grid",
+      "status": "pending",
+      "passes": false,
+      "files": ["main.py", "src/core/game.py", "src/core/camera.py", "src/core/grid.py", "src/core/renderer.py", "src/core/constants.py"],
+      "verify": "python main.py --test-engine"
+    },
+    {
+      "id": "world_system",
+      "name": "World: Terrain, Weather, Day/Night, Seasons",
+      "status": "pending",
+      "passes": false,
+      "files": ["src/world/terrain.py", "src/world/weather.py", "src/world/environment.py", "src/world/time_manager.py"],
+      "verify": "python -c \"from src.world.terrain import Terrain; t = Terrain(32,32); print('Terrain OK')\""
+    },
+    {
+      "id": "building_system",
+      "name": "Building System: Placement, Types, Construction",
+      "status": "pending",
+      "passes": false,
+      "files": ["src/buildings/building.py", "src/buildings/building_manager.py", "src/buildings/building_types.py"],
+      "verify": "python -c \"from src.buildings.building_types import BuildingType; print('Buildings OK')\""
+    },
+    {
+      "id": "citizen_system",
+      "name": "Citizen System: AI, Pathfinding, Jobs, Relationships",
+      "status": "pending",
+      "passes": false,
+      "files": ["src/citizens/citizen.py", "src/citizens/ai.py", "src/citizens/pathfinding.py", "src/citizens/citizen_manager.py"],
+      "verify": "python -c \"from src.citizens.citizen import Citizen; c = Citizen('Test', 25); print('Citizen OK')\""
+    },
+    {
+      "id": "economy_system",
+      "name": "Economy: Currency, Taxes, Trade, Resources, Budget",
+      "status": "pending",
+      "passes": false,
+      "files": ["src/economy/economy.py", "src/economy/resources.py", "src/economy/market.py"],
+      "verify": "python -c \"from src.economy.economy import Economy; e = Economy(); print('Economy OK')\""
+    },
+    {
+      "id": "ui_system",
+      "name": "UI: Toolbar, Panels, HUD, God Mode Panel",
+      "status": "pending",
+      "passes": false,
+      "files": ["src/ui/hud.py", "src/ui/toolbar.py", "src/ui/panels.py", "src/ui/god_mode.py", "src/ui/tooltip.py"],
+      "verify": "python -c \"from src.ui.toolbar import Toolbar; print('UI OK')\""
+    },
+    {
+      "id": "desktop_save",
+      "name": "Desktop Integration & Save/Load System",
+      "status": "pending",
+      "passes": false,
+      "files": ["src/save/save_manager.py", "src/desktop/desktop_integration.py"],
+      "verify": "python -c \"from src.save.save_manager import SaveManager; print('Save OK')\""
+    },
+    {
+      "id": "github_release",
+      "name": "GitHub Release: README, LICENSE, docs, requirements",
+      "status": "pending",
+      "passes": false,
+      "files": ["README.md", "LICENSE", "CONTRIBUTING.md", "CHANGELOG.md", "requirements.txt", ".gitignore"],
+      "verify": "python -c \"import os; files=['README.md','LICENSE','CONTRIBUTING.md','requirements.txt']; [print(f+'OK') for f in files if os.path.exists(f)]\""
+    }
+  ]
+}
