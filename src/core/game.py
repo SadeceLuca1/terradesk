@@ -257,7 +257,7 @@ class Game:
         keys = pygame.key.get_pressed()
         self.camera.update(dt, keys)
         self.time_manager.update(dt)
-        self.environment.update(dt, self.time_manager.season,
+        self.environment.update(dt, self.time_manager,
                                 self.screen.get_width(),
                                 self.screen.get_height())
         self.building_manager.update(self.time_manager.tick)
